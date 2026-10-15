@@ -471,8 +471,20 @@ footer{
 
 /* ---------- презентация: карточки товаров ---------- */
 .deck{padding:56px 0 0;border-top:1px solid var(--line-soft);margin-top:44px}
+.decklead{margin-top:14px;max-width:64ch}
+.decklead h2{
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(20px,2.8vw,28px);margin:0 0 9px;letter-spacing:-.015em;text-wrap:balance;
+}
+.decklead p{margin:0;color:var(--text-2);font-size:15px;max-width:60ch}
+.decktags{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+.decktag{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--amber-soft);border:1px solid rgba(227,166,76,.28);
+  border-radius:5px;padding:3px 9px;background:rgba(227,166,76,.06);
+}
 .deckbox{
-  position:relative;margin-top:18px;border-radius:var(--radius);overflow:hidden;
+  position:relative;margin-top:22px;border-radius:var(--radius);overflow:hidden;
   border:1px solid var(--line-soft);background:var(--ink-2);
   box-shadow:0 30px 70px -40px rgba(0,0,0,.9);
   outline:none;
@@ -611,6 +623,17 @@ footer{
     <div class="sechead">
       <span class="eyebrow">Карточки товаров <b>/</b> Wildberries · Ozon</span>
       <span class="counter"><em id="dknum">01</em> / <span id="dktot">13</span></span>
+    </div>
+
+    <div class="decklead">
+      <h2>Карточки товаров для Wildberries и Ozon</h2>
+      <p>Второе направление помимо AI-видео: инфографика, продающие слайды и фотоворонка карточки - от анализа товара и УТП до гипотез по CTR и конверсии. Ниже презентация с кейсами.</p>
+      <div class="decktags">
+        <span class="decktag">Инфографика</span>
+        <span class="decktag">Фотоворонка</span>
+        <span class="decktag">Редизайн карточек</span>
+        <span class="decktag">AI-визуал</span>
+      </div>
     </div>
 
     <div class="deckbox" id="deckbox" tabindex="0" aria-roledescription="презентация" aria-label="Портфолио карточек товаров для маркетплейсов">
