@@ -949,6 +949,12 @@ const stage=document.getElementById('stage');
 let wheelLock=0;
 stage.addEventListener('wheel',e=>{
   if(modalOpen) return;
+  /* листаем только когда курсор над самой карточкой: по бокам страница скроллится как обычно */
+  const ac=cards[active];
+  if(ac){
+    const r=ac.getBoundingClientRect();
+    if(e.clientX<r.left-16||e.clientX>r.right+16) return;
+  }
   const d=Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:e.deltaY;
   if(Math.abs(d)<3) return;
   e.preventDefault();
