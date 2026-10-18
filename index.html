@@ -469,6 +469,165 @@ footer{
   *{animation-duration:.01ms !important;transition-duration:.01ms !important}
 }
 
+/* ---------- кейсы: полные воронки карточек ---------- */
+.cases{padding:56px 0 0;border-top:1px solid var(--line-soft);margin-top:44px}
+.caselead{margin-top:14px;max-width:64ch}
+.caselead h2{
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(20px,2.8vw,28px);margin:0 0 9px;letter-spacing:-.015em;text-wrap:balance;
+}
+.caselead p{margin:0;color:var(--text-2);font-size:15px;max-width:60ch}
+
+.caselist{margin-top:30px;display:flex;flex-direction:column;gap:14px}
+
+.case{
+  border:1px solid var(--line-soft);border-radius:var(--radius);
+  background:linear-gradient(180deg,rgba(255,255,255,.022),rgba(255,255,255,0));
+  overflow:hidden;transition:border-color .35s ease,background .35s ease;
+}
+.case:hover{border-color:var(--line);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0))}
+
+.casehead{
+  display:flex;align-items:flex-start;gap:16px;justify-content:space-between;
+  padding:20px 22px 0;flex-wrap:wrap;
+}
+.caseidx{
+  font-family:var(--mono);font-size:11px;color:var(--text-3);
+  letter-spacing:.08em;padding-top:5px;flex:0 0 auto;
+}
+.casemeta{flex:1 1 320px;min-width:0}
+.casemeta h3{
+  font-family:var(--display);font-weight:500;font-size:clamp(16px,2vw,19px);
+  margin:0 0 5px;letter-spacing:-.01em;
+}
+.casecat{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:.06em}
+.casetext{margin:11px 0 0;color:var(--text-2);font-size:14px;line-height:1.62;max-width:62ch}
+.casetags{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.casetag{
+  font-family:var(--mono);font-size:10.5px;color:var(--text-3);
+  border:1px solid var(--line-soft);border-radius:999px;padding:4px 10px;letter-spacing:.04em;
+}
+
+.casestrip{
+  display:flex;gap:10px;padding:18px 22px 22px;overflow-x:auto;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--line) transparent;
+}
+.casestrip::-webkit-scrollbar{height:6px}
+.casestrip::-webkit-scrollbar-thumb{background:var(--line);border-radius:99px}
+.casestrip::-webkit-scrollbar-track{background:transparent}
+
+.shot{
+  position:relative;flex:0 0 auto;width:min(300px,72vw);aspect-ratio:4/3;
+  border:1px solid var(--line-soft);border-radius:12px;overflow:hidden;
+  background:#0d0c10;cursor:zoom-in;scroll-snap-align:start;padding:0;
+  transition:transform .4s cubic-bezier(.22,.8,.28,1),border-color .3s ease;
+}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;
+  transition:transform .6s cubic-bezier(.22,.8,.28,1),opacity .4s ease}
+.shot:hover{transform:translateY(-3px);border-color:rgba(227,166,76,.38)}
+.shot:hover img{transform:scale(1.045)}
+.shot:focus-visible{outline:none;border-color:rgba(227,166,76,.6);box-shadow:0 0 0 2px rgba(227,166,76,.3)}
+.shotcap{
+  position:absolute;left:0;right:0;bottom:0;padding:22px 11px 9px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--text);
+  background:linear-gradient(180deg,rgba(10,9,12,0),rgba(10,9,12,.88));
+  text-align:left;pointer-events:none;
+}
+
+/* ---------- лайтбокс ---------- */
+.lb{
+  position:fixed;inset:0;z-index:300;display:none;
+  background:rgba(7,6,10,.94);backdrop-filter:blur(14px);
+  align-items:center;justify-content:center;padding:28px;
+  opacity:0;transition:opacity .3s ease;
+}
+.lb.open{display:flex}
+.lb.vis{opacity:1}
+.lbimg{
+  max-width:min(1500px,96vw);max-height:88vh;object-fit:contain;display:block;
+  border-radius:10px;opacity:0;transform:scale(.985);
+  transition:opacity .34s ease,transform .44s cubic-bezier(.22,.8,.28,1);
+}
+.lbimg.on{opacity:1;transform:none}
+.lbbar{
+  position:absolute;left:0;right:0;bottom:20px;display:flex;
+  align-items:center;justify-content:center;gap:14px;
+  font-family:var(--mono);font-size:11.5px;color:var(--text-3);
+  font-variant-numeric:tabular-nums;pointer-events:none;padding:0 20px;
+}
+.lbbar em{color:var(--text);font-style:normal}
+.lbnav,.lbx{
+  position:absolute;border:1px solid var(--line);border-radius:999px;
+  background:rgba(23,21,28,.72);color:var(--text);cursor:pointer;
+  display:grid;place-items:center;transition:background .25s ease,border-color .25s ease;
+}
+.lbnav{width:46px;height:46px;top:50%;transform:translateY(-50%)}
+.lbnav svg,.lbx svg{width:19px;height:19px;fill:currentColor}
+.lbprev{left:18px}
+.lbnext{right:18px}
+.lbx{top:18px;right:18px;width:40px;height:40px}
+.lbnav:hover,.lbx:hover{background:rgba(227,166,76,.16);border-color:rgba(227,166,76,.5)}
+
+@media (prefers-reduced-motion:reduce){
+  .shot,.shot img,.lbimg,.lb{transition:opacity .2s ease}
+  .shot:hover{transform:none}
+  .shot:hover img{transform:none}
+}
+@media (max-width:720px){
+  .cases{padding-top:40px;margin-top:32px}
+  .casehead{padding:17px 16px 0;gap:12px}
+  .casestrip{padding:15px 16px 18px;gap:9px}
+  .shot{width:min(260px,78vw)}
+  .lb{padding:14px}
+  .lbnav{width:40px;height:40px}
+  .lbprev{left:8px}
+  .lbnext{right:8px}
+  .lbx{top:10px;right:10px}
+}
+
+/* ---------- автолистание: прогресс + мягкий дрейф ---------- */
+.deckview img.on{animation:dkdrift 2.6s cubic-bezier(.3,.05,.4,1) both}
+@keyframes dkdrift{from{transform:scale(1.014)}to{transform:scale(1)}}
+
+.dprog{
+  position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:rgba(255,255,255,.07);overflow:hidden;pointer-events:none;
+  opacity:0;transition:opacity .4s ease;z-index:3;
+}
+.dprog.live{opacity:1}
+.dprog i{
+  display:block;height:100%;width:100%;transform-origin:left center;transform:scaleX(0);
+  background:linear-gradient(90deg,rgba(227,166,76,.35),var(--amber));
+}
+.dprog.run i{animation:dkbar var(--dkdelay,2000ms) linear forwards}
+@keyframes dkbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+.ddot{position:relative}
+.ddot.on::after{
+  content:"";position:absolute;inset:-5px;border-radius:999px;
+  border:1px solid rgba(227,166,76,.32);
+  animation:dkpulse 2.6s ease-out infinite;
+}
+@keyframes dkpulse{
+  0%{transform:scale(.8);opacity:0}
+  35%{opacity:.9}
+  100%{transform:scale(1.35);opacity:0}
+}
+
+.deckmsg{
+  position:absolute;inset:0;display:none;place-items:center;text-align:center;
+  padding:28px;color:var(--text-2);font-size:14px;line-height:1.6;z-index:4;
+}
+.deckmsg.on{display:grid}
+.deckmsg b{display:block;color:var(--text);font-size:15px;margin-bottom:6px;font-weight:500}
+.deckmsg code{font-family:var(--mono);font-size:12px;color:var(--amber)}
+
+@media (prefers-reduced-motion:reduce){
+  .deckview img.on{animation:none}
+  .dprog,.ddot.on::after{animation:none;display:none}
+}
+
 /* ---------- презентация: карточки товаров ---------- */
 .deck{padding:56px 0 0;border-top:1px solid var(--line-soft);margin-top:44px}
 .decklead{margin-top:14px;max-width:64ch}
@@ -493,9 +652,25 @@ footer{
 .deckview{position:relative;aspect-ratio:16/9;background:#07060A;cursor:pointer;touch-action:pan-y}
 .deckview img{
   position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;
-  object-fit:contain;opacity:0;transition:opacity .34s ease;user-select:none;
+  object-fit:contain;user-select:none;
+  opacity:0;transform:translate3d(0,0,0) scale(1);
+  transition:opacity .46s cubic-bezier(.22,.8,.28,1),
+             transform .66s cubic-bezier(.22,.8,.28,1),
+             filter .46s ease;
+  will-change:opacity,transform;backface-visibility:hidden;
 }
-.deckview img.on{opacity:1}
+.deckview img.on{opacity:1;transform:none;filter:blur(0)}
+/* входит: приезжает со своей стороны, слегка крупнее и мягче */
+.deckview img.in-next{opacity:0;transform:translate3d(6%,0,0) scale(1.045);filter:blur(5px)}
+.deckview img.in-prev{opacity:0;transform:translate3d(-6%,0,0) scale(1.045);filter:blur(5px)}
+/* уходит: отступает вглубь и в сторону */
+.deckview img.out-next{opacity:0;transform:translate3d(-4%,0,0) scale(.965);filter:blur(3px)}
+.deckview img.out-prev{opacity:0;transform:translate3d(4%,0,0) scale(.965);filter:blur(3px)}
+@media (prefers-reduced-motion:reduce){
+  .deckview img{transition:opacity .3s ease}
+  .deckview img.in-next,.deckview img.in-prev,
+  .deckview img.out-next,.deckview img.out-prev{transform:none;filter:none}
+}
 .dnav{
   position:absolute;top:50%;z-index:4;transform:translateY(-50%);
   width:42px;height:42px;border-radius:50%;
@@ -647,6 +822,10 @@ footer{
       <button class="dnav dnext" id="dknext" type="button" aria-label="Следующий слайд">
         <svg viewBox="0 0 24 24"><path d="M8.6 3.6 7 5.3l6.7 6.7L7 18.7l1.6 1.7L17 12z"/></svg>
       </button>
+      <div class="deckmsg" id="dkmsg" role="status">
+        <span><b>Слайды не загрузились</b>Проверьте, что папка <code>slides</code> лежит рядом с <code>index.html</code>.</span>
+      </div>
+      <div class="dprog" id="dkprog" aria-hidden="true"><i></i></div>
       <button class="dfull" id="dkfull" type="button" aria-label="Открыть во весь экран">
         <svg viewBox="0 0 24 24"><path d="M4 9V4h5v2H6v3zm11-5h5v5h-2V6h-3zM4 15h2v3h3v2H4zm14 0h2v5h-5v-2h3z"/></svg>
       </button>
@@ -658,6 +837,116 @@ footer{
     </div>
   </div>
 </section>
+
+<section class="cases">
+  <div class="wrap">
+    <div class="sechead">
+      <span class="eyebrow">Кейсы <b>/</b> собранные воронки</span>
+      <span class="counter">10 слайдов</span>
+    </div>
+
+    <div class="caselead">
+      <h2>Отдельные товары: от главного слайда до баннера</h2>
+      <p>Три законченные работы по разным категориям. В каждой - своя логика подачи, но единый подход: одно ведущее преимущество на обложке, остальные слайды закрывают возражения по порядку. Нажмите на кадр, чтобы открыть крупно.</p>
+    </div>
+
+    <div class="caselist">
+      <article class="case">
+        <div class="casehead">
+          <span class="caseidx">01</span>
+          <div class="casemeta">
+            <h3>Сыворотка для лица с витамином C</h3>
+            <span class="casecat">Уход · Бьюти</span>
+            <p class="casetext">Полная воронка карточки: главное изображение с вынесенным составом и ценовым якорем, галерея с макро-текстурой и упаковкой, рекламный баннер под три площадки. Акцент на читаемости в выдаче - на превью считывается название, эффект и размер скидки.</p>
+            <div class="casetags"><span class="casetag">Главное изображение</span><span class="casetag">Фотоворонка</span><span class="casetag">Кросс-платформенный баннер</span></div>
+          </div>
+        </div>
+        <div class="casestrip">
+          <button class="shot" type="button" data-lb="0" aria-label="Сыворотка для лица с витамином C - Главное изображение, открыть крупно">
+            <img src="cases/serum-01.webp" alt="Сыворотка для лица с витамином C - Главное изображение" loading="lazy" decoding="async" draggable="false">
+            <span class="shotcap">Главное изображение</span>
+          </button>
+          <button class="shot" type="button" data-lb="1" aria-label="Сыворотка для лица с витамином C - Фотоворонка, открыть крупно">
+            <img src="cases/serum-02.webp" alt="Сыворотка для лица с витамином C - Фотоворонка" loading="lazy" decoding="async" draggable="false">
+            <span class="shotcap">Фотоворонка</span>
+          </button>
+          <button class="shot" type="button" data-lb="2" aria-label="Сыворотка для лица с витамином C - Кросс-платформенный баннер, открыть крупно">
+            <img src="cases/serum-03.webp" alt="Сыворотка для лица с витамином C - Кросс-платформенный баннер" loading="lazy" decoding="async" draggable="false">
+            <span class="shotcap">Кросс-платформенный баннер</span>
+          </button>
+        </div>
+      </article>
+      <article class="case">
+        <div class="casehead">
+          <span class="caseidx">02</span>
+          <div class="casemeta">
+            <h3>Серьги с натуральным камнем</h3>
+            <span class="casecat">Ювелирка · Бижутерия</span>
+            <p class="casetext">Премиальная подача без перегруза: товар на светлом фоне, выноски только по тем свойствам, которые закрывают возражения - замок, гипоаллергенность, упаковка. Галерея собрана так, чтобы показать масштаб на модели и комплектацию.</p>
+            <div class="casetags"><span class="casetag">Главное изображение</span><span class="casetag">Галерея</span><span class="casetag">Промо-баннер</span></div>
+          </div>
+        </div>
+        <div class="casestrip">
+          <button class="shot" type="button" data-lb="3" aria-label="Серьги с натуральным камнем - Главное изображение, открыть крупно">
+            <img src="cases/earrings-01.webp" alt="Серьги с натуральным камнем - Главное изображение" loading="lazy" decoding="async" draggable="false">
+            <span class="shotcap">Главное изображение</span>
+          </button>
+          <button class="shot" type="button" data-lb="4" aria-label="Серьги с натуральным камнем - Галерея, открыть крупно">
+            <img src="cases/earrings-02.webp" alt="Серьги с натуральным камнем - Галерея" loading="lazy" decoding="async" draggable="false">
+            <span class="shotcap">Галерея</span>
+          </button>
+          <button class="shot" type="button" data-lb="5" aria-label="Серьги с натуральным камнем - Промо-баннер, открыть крупно">
+            <img src="cases/earrings-03.webp" alt="Серьги с натуральным камнем - Промо-баннер" loading="lazy" decoding="async" draggable="false">
+            <span class="shotcap">Промо-баннер</span>
+          </button>
+        </div>
+      </article>
+      <article class="case">
+        <div class="casehead">
+          <span class="caseidx">03</span>
+          <div class="casemeta">
+            <h3>Солнцезащитные очки, премиальная линия</h3>
+            <span class="casecat">Аксессуары · Премиум</span>
+            <p class="casetext">Серия из четырёх слайдов для дорогого сегмента: характеристики линзы, схема геометрии оправы, сравнение «с поляризацией / без» и комплектация. Единая типографика и палитра держат линейку как один визуальный язык.</p>
+            <div class="casetags"><span class="casetag">Серия слайдов</span><span class="casetag">Инфографика</span><span class="casetag">Сравнение</span><span class="casetag">Комплектация</span></div>
+          </div>
+        </div>
+        <div class="casestrip">
+          <button class="shot" type="button" data-lb="6" aria-label="Солнцезащитные очки, премиальная линия - Серия слайдов, открыть крупно">
+            <img src="cases/glasses-01.webp" alt="Солнцезащитные очки, премиальная линия - Серия слайдов" loading="lazy" decoding="async" draggable="false">
+            <span class="shotcap">Серия слайдов</span>
+          </button>
+          <button class="shot" type="button" data-lb="7" aria-label="Солнцезащитные очки, премиальная линия - Инфографика, открыть крупно">
+            <img src="cases/glasses-02.webp" alt="Солнцезащитные очки, премиальная линия - Инфографика" loading="lazy" decoding="async" draggable="false">
+            <span class="shotcap">Инфографика</span>
+          </button>
+          <button class="shot" type="button" data-lb="8" aria-label="Солнцезащитные очки, премиальная линия - Сравнение, открыть крупно">
+            <img src="cases/glasses-03.webp" alt="Солнцезащитные очки, премиальная линия - Сравнение" loading="lazy" decoding="async" draggable="false">
+            <span class="shotcap">Сравнение</span>
+          </button>
+          <button class="shot" type="button" data-lb="9" aria-label="Солнцезащитные очки, премиальная линия - Комплектация, открыть крупно">
+            <img src="cases/glasses-04.webp" alt="Солнцезащитные очки, премиальная линия - Комплектация" loading="lazy" decoding="async" draggable="false">
+            <span class="shotcap">Комплектация</span>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр слайда">
+  <img class="lbimg" id="lbimg" alt="">
+  <button class="lbnav lbprev" id="lbprev" type="button" aria-label="Предыдущий">
+    <svg viewBox="0 0 24 24"><path d="M15.4 3.6 7 12l8.4 8.4 1.6-1.7-6.7-6.7 6.7-6.7z"/></svg>
+  </button>
+  <button class="lbnav lbnext" id="lbnext" type="button" aria-label="Следующий">
+    <svg viewBox="0 0 24 24"><path d="M8.6 3.6 7 5.3l6.7 6.7L7 18.7l1.6 1.7L17 12z"/></svg>
+  </button>
+  <button class="lbx" id="lbx" type="button" aria-label="Закрыть">
+    <svg viewBox="0 0 24 24"><path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7l1.4-1.4 6.3 6.3 6.3-6.3z"/></svg>
+  </button>
+  <div class="lbbar"><em id="lbnum">1</em> / <span id="lbtot">1</span><span id="lbcap"></span></div>
+</div>
 
 <section class="channels">
   <div class="wrap">
@@ -1225,15 +1514,23 @@ const DECK = ["slides/01.png", "slides/02.png", "slides/03.png", "slides/04.png"
 
   function show(i, instant){
     i = (i + DECK.length) % DECK.length;
+    /* направление: вперёд или назад — от него зависит, с какой стороны приезжает слайд */
+    const fwd = ((i - di + DECK.length) % DECK.length) <= (DECK.length / 2);
     di = i; meta(i);
     const my = ++token;
     const next = bottom;
     next.src = DECK[i];
     const swap = ()=>{
       if(my !== token) return;
+      const prev = top;
+      next.classList.remove('on','out-next','out-prev','in-next','in-prev');
+      if(!instant) next.classList.add(fwd ? 'in-next' : 'in-prev');
+      void next.offsetWidth;                       /* форсируем старт анимации */
+      next.classList.remove('in-next','in-prev');
       next.classList.add('on');
-      top.classList.remove('on');
-      const t = top; top = next; bottom = t;
+      prev.classList.remove('on');
+      prev.classList.add(fwd ? 'out-next' : 'out-prev');
+      top = next; bottom = prev;
     };
     if(instant || !next.decode){ swap(); warm(i); return; }
     next.decode().then(swap).catch(swap);
@@ -1253,15 +1550,47 @@ const DECK = ["slides/01.png", "slides/02.png", "slides/03.png", "slides/04.png"
   }
 
   /* ---- автолистание ---- */
-  const DELAY = 2000;
+  const DELAY = 2600;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let timer = null, hovered = false, visible = false;
+  const prog = document.getElementById('dkprog');
+  let timer = null, hovered = false, visible = false, ready = false;
 
-  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+  if(prog) prog.style.setProperty('--dkdelay', DELAY + 'ms');
+
+  /* полоска прогресса: перезапускаем анимацию на каждом слайде */
+  function progRun(){
+    if(!prog || reduceMotion) return;
+    prog.classList.add('live');
+    prog.classList.remove('run');
+    void prog.offsetWidth;
+    prog.classList.add('run');
+  }
+  function progHold(){
+    if(!prog) return;
+    /* замораживаем полоску на текущей ширине */
+    const bar = prog.firstElementChild;
+    if(bar){
+      const w = bar.getBoundingClientRect().width / prog.getBoundingClientRect().width;
+      prog.classList.remove('run');
+      bar.style.transform = 'scaleX(' + (w || 0).toFixed(4) + ')';
+    }
+  }
+  function progClear(){
+    if(!prog) return;
+    const bar = prog.firstElementChild;
+    if(bar) bar.style.transform = '';
+    prog.classList.remove('run');
+    prog.classList.remove('live');
+  }
+
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } progHold(); }
   function start(){
-    stop();
-    if(reduceMotion || hovered || !visible || document.hidden) return;
-    timer = setInterval(()=>show(di + 1), DELAY);
+    if(timer){ clearInterval(timer); timer = null; }
+    if(reduceMotion || hovered || !visible || document.hidden || !ready){ progClear(); return; }
+    const bar = prog && prog.firstElementChild;
+    if(bar) bar.style.transform = '';
+    progRun();
+    timer = setInterval(()=>{ show(di + 1); progRun(); }, DELAY);
   }
   function bump(){ start(); }   /* перезапуск отсчёта после ручного действия */
 
@@ -1279,6 +1608,7 @@ const DECK = ["slides/01.png", "slides/02.png", "slides/03.png", "slides/04.png"
   } else {
     visible = true; start();
   }
+
 
   document.getElementById('dkprev').addEventListener('click', e=>{ e.stopPropagation(); show(di-1); bump(); });
   document.getElementById('dknext').addEventListener('click', e=>{ e.stopPropagation(); show(di+1); bump(); });
@@ -1317,8 +1647,103 @@ const DECK = ["slides/01.png", "slides/02.png", "slides/03.png", "slides/04.png"
     if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){ e.stopPropagation(); }
   }, true);
 
-  show(0, true);
+  /* слайды могут лежать в любом формате (png / webp / jpg) — находим рабочий и стартуем */
+  /* ---- поиск рабочего формата: пробуем расширения по очереди ---- */
+  (function detectFormat(){
+    const cands = ['webp','png','jpg','jpeg','PNG','WEBP','JPG'];
+    const swapExt = (p, ext)=>p.replace(/\.[a-z0-9]+$/i, '.' + ext);
+    const msg = document.getElementById('dkmsg');
+    let k = 0;
+    const probe = ()=>{
+      if(k >= cands.length){
+        /* ни один формат не отдался — показываем подсказку вместо битых картинок */
+        if(msg) msg.classList.add('on');
+        stop();
+        return;
+      }
+      const ext = cands[k];
+      const im = new Image();
+      im.onload = ()=>{
+        for(let i=0;i<DECK.length;i++) DECK[i] = swapExt(DECK[i], ext);
+        ready = true;
+        show(0, true);
+        start();
+      };
+      im.onerror = ()=>{ k++; probe(); };
+      im.src = swapExt(DECK[0], ext);
+    };
+    probe();
+  })();
 })();
+
+const LB = [{s:"cases/serum-01.webp",c:"Сыворотка для лица с витамином C - Главное изображение"}, {s:"cases/serum-02.webp",c:"Сыворотка для лица с витамином C - Фотоворонка"}, {s:"cases/serum-03.webp",c:"Сыворотка для лица с витамином C - Кросс-платформенный баннер"}, {s:"cases/earrings-01.webp",c:"Серьги с натуральным камнем - Главное изображение"}, {s:"cases/earrings-02.webp",c:"Серьги с натуральным камнем - Галерея"}, {s:"cases/earrings-03.webp",c:"Серьги с натуральным камнем - Промо-баннер"}, {s:"cases/glasses-01.webp",c:"Солнцезащитные очки, премиальная линия - Серия слайдов"}, {s:"cases/glasses-02.webp",c:"Солнцезащитные очки, премиальная линия - Инфографика"}, {s:"cases/glasses-03.webp",c:"Солнцезащитные очки, премиальная линия - Сравнение"}, {s:"cases/glasses-04.webp",c:"Солнцезащитные очки, премиальная линия - Комплектация"}];
+
+(function(){
+  const lb = document.getElementById('lb');
+  if(!lb || !LB.length) return;
+  const img = document.getElementById('lbimg');
+  const num = document.getElementById('lbnum');
+  const cap = document.getElementById('lbcap');
+  document.getElementById('lbtot').textContent = LB.length;
+  let i = 0, open = false, last = null;
+
+  function paint(){
+    const it = LB[i];
+    img.classList.remove('on');
+    const pre = new Image();
+    pre.onload = ()=>{ img.src = it.s; img.alt = it.c; requestAnimationFrame(()=>img.classList.add('on')); };
+    pre.onerror = ()=>{ img.src = it.s; img.alt = it.c; img.classList.add('on'); };
+    pre.src = it.s;
+    num.textContent = i + 1;
+    cap.textContent = ' · ' + it.c;
+  }
+  function show(n){
+    i = (n + LB.length) % LB.length;
+    paint();
+    // подгружаем соседей заранее
+    [i+1, i-1].forEach(k=>{ const o = new Image(); o.src = LB[(k + LB.length) % LB.length].s; });
+  }
+  function openAt(n, from){
+    last = from || null;
+    open = true;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(()=>lb.classList.add('vis'));
+    show(n);
+  }
+  function close(){
+    open = false;
+    lb.classList.remove('vis');
+    document.body.style.overflow = '';
+    setTimeout(()=>{ if(!open) lb.classList.remove('open'); }, 300);
+    if(last) last.focus();
+  }
+
+  document.querySelectorAll('.shot').forEach(b=>{
+    b.addEventListener('click', ()=>openAt(parseInt(b.dataset.lb, 10), b));
+  });
+  document.getElementById('lbnext').addEventListener('click', e=>{ e.stopPropagation(); show(i+1); });
+  document.getElementById('lbprev').addEventListener('click', e=>{ e.stopPropagation(); show(i-1); });
+  document.getElementById('lbx').addEventListener('click', e=>{ e.stopPropagation(); close(); });
+  lb.addEventListener('click', e=>{ if(e.target === lb || e.target === img) close(); });
+
+  document.addEventListener('keydown', e=>{
+    if(!open) return;
+    if(e.key === 'Escape'){ close(); }
+    else if(e.key === 'ArrowRight'){ show(i+1); }
+    else if(e.key === 'ArrowLeft'){ show(i-1); }
+  });
+
+  // свайп на телефоне
+  let sx = 0, sy = 0;
+  lb.addEventListener('touchstart', e=>{ sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive:true});
+  lb.addEventListener('touchend', e=>{
+    const dx = e.changedTouches[0].clientX - sx;
+    const dy = e.changedTouches[0].clientY - sy;
+    if(Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) show(i + (dx < 0 ? 1 : -1));
+  }, {passive:true});
+})();
+
 </script>
 
 </body>
