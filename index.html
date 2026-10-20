@@ -470,7 +470,7 @@ footer{
 }
 
 /* ---------- кейсы: полные воронки карточек ---------- */
-.cases{padding:56px 0 0;border-top:1px solid var(--line-soft);margin-top:44px}
+.cases{padding:10px 0 0}
 .caselead{margin-top:14px;max-width:64ch}
 .caselead h2{
   font-family:var(--display);font-weight:500;
@@ -593,6 +593,10 @@ footer{
   .lbx{top:10px;right:10px}
 }
 
+.reellead{margin-top:12px;max-width:62ch}
+.reellead p{margin:0;color:var(--text-2);font-size:14.5px;line-height:1.62}
+@media (max-width:720px){.reellead p{font-size:14px}}
+
 /* ---------- автолистание: прогресс + мягкий дрейф ---------- */
 .deckview img.on{animation:dkdrift 2.6s cubic-bezier(.3,.05,.4,1) both}
 @keyframes dkdrift{from{transform:scale(1.014)}to{transform:scale(1)}}
@@ -636,7 +640,7 @@ footer{
 }
 
 /* ---------- презентация: карточки товаров ---------- */
-.deck{padding:56px 0 0;border-top:1px solid var(--line-soft);margin-top:44px}
+.deck{padding:56px 0 0;border-top:1px solid var(--line-soft);margin-top:48px}
 .decklead{margin-top:14px;max-width:64ch}
 .decklead h2{
   font-family:var(--display);font-weight:500;
@@ -751,8 +755,8 @@ footer{
       <img class="avatar" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wgARCADIAMgDASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAECAwQFBgf/xAAYAQADAQEAAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAAB+YqKVMlaihjaBpoYAMknBSYQGCQDFoo1KqRwRfZYVGAtAr2YtOe23Tyb89dvC7XFvNEzTKJrzJu+jerru3qNefzu7nqOSrVeK113zebNpzuetDRVUYgAx2V2Ki2uc3KtKlK+n1mOvC53u/HTcOxzOxb7O2u/Dpt8x63j3l4OM49HFHfm6CvnU66Cezn2ZLxDeD8qDG3FjLY6YqnRRAe7PTrWlVWqis+8bONl0dXoeO9k14Z7sWnPpu5vVm6Y9LjE9zJty6ZBMF5tplMUh9HfwJZ6WEZWq9VEkdR1rLq39qjvRpkz9fwAuQlLp4H3uB6eao4XqfMOO9n00VOAsE+I02N30qhy2q8dpUTOM+orp381xt7XoeM7We27w/QwXjzLHfpz6un0cMt+b9L5y47ubVlqKjMJ8cnEc78u1Vs382zHY5evXecMXR4ppp080vL13M4jTlEV5y05Uj2NPlZJ+083bYHRy353MSAHGJa505nQyWuX38WWS7BTBgwuUyQ4tpCAaaAGmAr87T7nPy1BrMQLY+lmz2nLbjVc/MnrgwbQ0xsEImognFg1KASTgBKMgjFoEAHSXNnNdnmUANp1JKMgAQSaAcWgBATrnAJRcQYIBNACAVtW2ayDTmSBjaAnFoJJAOIANASjNjrUkJCABAAAK6qacoqQIdwZ3ZWDi00wAAABMNkYxmkrK2o7c5N54aaGogOJsALgHC4E7MQMQDkYAgAAA3UBNVgNdHUGevNrAVAFx//EAC0QAAIBAwIDBwQDAQAAAAAAAAECAwAEERASBSAhEyIjMDEyNBQzQUMVJEBC/9oACAEBAAEFAqJ/xD205rb4bL4ZFZ0ApomVefGm08y+00aA8A/baoozKZoUjiihXsHhLV/G5LDDci1uAr6it4YSW42kYOm2lHdYaKP6x+3J0qNijNKWZDmSaQmVrp2i0UFjLC0QzQ61Db7z/HUOGSULaaNp1EseM1to+1PY+iD+r+qbkzW7GsBZJLqV59FFQKQaSnjG3iFsI0XpRPWkXuv61H8X9Qg36Z6DTOi+6wWIm8SFRNgyD1hOKiZXEfWjV4MwGsV2ZqP2yDqRioviH7Mfs1JzoiF6xgxzGMy3PaUFpzQJFWEjSTTX7wSwcacG/cfSZzoZztg7yuhzJgJB8QjwQSo5FUtSExH1ONFp0zW01wNe/wAQhMVyo6QQGK2jCkHqxq0HdkxiU5Nv8T9S+3ksZ1glu2iZFo6K26kxm5kUVw26eFp7Y3hgsYbauIN4G44WiKsEzHOuKk9bX4v6p22DkFHrQrFbaj9y9TJ0a1nljpLlJiT0vL2SXQUTXDB4d0OkvrafF/XNHvTmU0GpzS9CGq3RZHgsFjZx37iXEUsfcIqNd5nsDFHwz7d1U3rZ/F/W77Y9DDiP1pUZiLNzUsfYyUq7iyxxRYyEdo2i4nJE63c12OIXqlEnDxMMm27s14S1tw32XVTetn8Uey5Hc03EiHCu/WSC4VZ79d10FOYUwJnzSy0ki5jksoUuuJPPoKHSo5trPxa37HhsiNJdipl62fxh7WTcmNYV3FZexpVMzT9WsMBrq4jLk58pXZGHEWalwzLKI40OY3bCxruqWJomqGPch61w257KOWJSrzll8gcsUvZsjByZihNwaXap7VXJHXBAlgVV7YRBmLnnOv55Nxxp9M+BBSQimjKxmVseR6DkHOC+yG47N2SRzNORDqOX0o6jT8cxlUiNAxEspqaTtH5B5A0/HOVx/p/55vx/hjAZD0PKfIxXZtjFY54ztp+rYrbWNT5ETYEtBaNAZr6dcEYPL1oUBTDyo/RutD20qnJJz61jQaZ1U9ZB08m3XdWKzQ9YmG54VcPCy0Tis1//xAAjEQACAgEEAgIDAAAAAAAAAAAAAQIREAMSITEgMBNBMkBR/9oACAEDAQE/ASmyvCsoeYpURaomhDVdkYt9D0pEoFCHlCY5GjHczWh9s0qQ3wSVoYosaH4RiKTi7Ruc3bGmNyUbINvjClY2PwjqcUIi+T6K+ib2LER9jzR8UquhcCg+xSo32TkmUJD7HmMqdk9X+EY7makl+KFqUS1LwmbsPHBtZVG71LaSlwN+xv2L9eKJLwQ/V//EACARAAICAgIDAQEAAAAAAAAAAAABAhEQICExAxIwQUD/2gAIAQIBAT8BLWt7yuxp2Qv9GJ30NnuhSwxaUUeWfqjw+S0T5ELvDYtWyk+z1UesUrJrnDQhaPx83h4ZHl4YtLG6Oy6GhxZGLRZYtKJp/ouEQjfY1YoVij11snyRXHydiuyvnRX0f89ieq+X/8QALRAAAQMDAgUCBQUAAAAAAAAAAQACERAhMRIgAyIwQVFAYRMUMkJSI1BgYoH/2gAIAQEABj8C9NKG3V26WOkKQEPyUn6imcEnOUYdyhEbgrNQE8ykWKjoCkhA+Fc2UtOFoxWAJQJFIplSIUlaxYt6A6IeGzCu2G7YoXMwegEHHfdXVolctLOBXupo+uNo32UVlQrFdyEW8O4CjitBai8YON0UCttgCSowVNRV5T5wSvJ8L9XmOmQw9k4nyrdTU4SEX/ccbIV8KAEYZqHhN4kaNXYqdEv8p/E9o6I6cKA2U0/Ki34rRcO8Hsin8L7J9GKaSVrZxHakCQJ8p58KaBq1bCjs1TSyb/ZFlZOaBw7IuN57LkZ8NvdxXy/BNh9TvKh1jRqsNhRQrpmyk4Wvh4TdSLjgqAr5UK9BxHczvC08PkZsBK0QSiAc9qlHdo7ha2smKFzh/q5Lnp6m2IWni39wvMpzax5Wk0Lgbq6c2JlF73QtDbN63siUR2pM4UuRQIwmuacq2VPoIrNIi6iFo9LBIURKPHx7KPuPpsq7oUO4gDVP8JIUdeelPXys1mf21221MU//xAAkEAEAAgICAgIDAQEBAAAAAAABABEhQRAxIFFhcYGRoTCx8P/aAAgBAQABPyGp6J3CVCVK8K82C4e5YBCTIcdgrhEusQSjLzC5hEfTES1eJDHaLM7cLA8JqwnJhpPmFk3DMRKfbpqVCX8cW7g5Rt0RCT8tRODtCLgJ8yuDaUcJ7lkCXRLw1KT/AJSiULXUEIvaVI027m3gTeOphZMp6lpDQykWbMOo8GwlRNr5II4iyIAcCzHuXKMe5CDctvEw+41Q98WpmkWGi1KzG9QTBtCC6sxo9TEJ3S8sxdtcAVCQ5R7/AJlrocAGe5UY4jZlylNIGCXq5VB9EVTpDiEw/oZQUAkp6Anv/IVrRcGL4jlxp4DC4LUH7IcfIO1BZWpkMZYuYDaIVD9oQYOHmplXGLh1Y36iXLO3BiDSPqEqESjGdIAbQZSz7IV8TQpdRujQylLRisTI0xKR7h6mvcqyPV+5SrsEFp2YBuWrG0CT/O0AmkSYlylHXhMlExgEDjwuL7RuIsDSjxkmUFuYXSpiQoCBHVg0gqwLQhgQG0qyfZKKm5gzuYLSvx5OJ/cWl5E9m56EsxoXNUsHSYPU4XpjV6mowRRvZFWYwTPIHGXMJbLFcO0E9sDP7lQ+uTuMHihgXLWWUe4Fw13uoVrHYs6iOpKo0pYSdnMolOduOOryrsmHFV+6ERzV5viA4HcoYpIwR7R0OyBxlFssEar08HIwWSpUHyZco/ks6puCWFQLE3EnQkIIhzDjzBZzVqggdCUcc4PHqYCHREZDLClDTGd8g3FoMoui4i0ER1Xxm44JkVE9GUtsHMpiyvUolORFPeGI1goZ/fK65VFgY5ypQydxc8ZLN1cSjCvbUvC0YllePqVBrqLDGYzqH/rgB9BIXtSRWwQAJcPuYslgv8J2MhhmDkT7TMKxh9QqOX7gHB/3iuan1wz05ZqMW5TDRWIUXtNguII+CCj21CaIJBv3MEgQdLO4S9H6J8T/AJNeH1y6zGNxzwZJRW49y/fBmiX92/UYtkODhqGqb4OHrg4ZjN3z2RnRh3Lhglx4WxCL1O5XkIYHG6f3fIm+e4bRXnnGLmEXXKzXGFRZBr1Lgo/sX1DB4GDxPXLMeDxblHCEXc1Xi9To5vxODrxYzUcn7j4EYxryJr/LfiG3gcHHTi/ElkwLNES8V5qrjKkOK3B/iwMoVlMVx95YC5+Ey4NchB1HvEaRLNEpeHzJk5baeyOcRlqlwZIgIoeOkGGUsZQMuBO1Cb8yXR8RyT1No8YWiSwdopiUoS6n/9oADAMBAAIAAwAAABBx/pWUtrYi1svF61HWd/qRsFmIAFNSdLhtjJh48JNzM8rVtCz0ZA/ljkCeIOJRXBn73gjIs1FyOCpnFo3F77G0AckysIKtNe2jq3VUaz/sF2GhUU01WH3C/wD5R9tBNRFlUw6jVBRZd9A5JoAYOCyVRBd+3n0+BgeBBh9ddhAj9//EAB8RAAMAAwACAwEAAAAAAAAAAAABERAhMSBBMFFxYf/aAAgBAwEBPxC60JSlJjWyEPxlMHjsFBMUlUJeDHmGvoDUqyhdHY8MyPShxHIQ2VnsHYiixHwWWLoTFRP7GPbWsAWQqOiCmLupv+DWh68VhKsm7jVEYKoFqmEPnRrdO8xI9wb2ITPUK6GH9C0StR5GLbRLYuBMafR6EGrTVHVFFU4ujUnBUahMN15JcXY+Dw36x+eKHhen0SxX4090vr5OR/FMIaJ4smiCW9kOE8HHj6F0XB7Gj//EAB4RAQEBAAMAAwEBAAAAAAAAAAEAERAhMSAwQVFh/9oACAECAQE/EM77knLpvLbeHsSxHC8JwSWpg7iOwDtv9oltleI4zgAvxdk6jLYjjjJDH9gZQ/AN9kuQDkETuEzABIdICD7DnctIzLsWuzx2T3WYcfMNvBB7toNJPTkncXju73jjIdJ6Wj+JeMi2eKFbvGGR+WZHCpH93TY9uc+D8AekTfz6mH6+xQ/YnGw/Ee7Z+uP2Z9jj/8QAIBABAAMAAwADAQEBAAAAAAAAAQARITFBUWFxgRCRwf/aAAgBAQABPxAQ3WQxDn7G7LrBlsYE5fwkLScEoxNqVKlRyOzp/EFCKR5LvulYe4V2k5jKr59lJL5RF/SwOoFQlg8y3yW8VPNLq0a4jHP8oOCHjJXPxzESVG4LJc5kZLvxLva5zvIp/kdLQa3LOqmq9ibI1WcdIIARU6IlKA4fiBUBgxoQHLPEPwbCBrxHqDlpKIB+alkE5p/iKaTzbH5lqNOF2RpsajULhnAkD6gpy9ZZ88J+E1kd/MdBXdcGcDuA4MEDLvD1cMeUr2W9XuVeRSCqBKs3GyhSKdKBYSY55hemBLI5eeVjBX2GukiQK6HUBSOS6iG0MKjp3KvynGg0/wAkda7qFpqlioJSK/2AVS1CgE13EU9ml9R7rWLZfj7iW9gfYPojDoclieDSxqtKOYaoCWhvcrYOKHB0+SyU5UfK5LguI2zio65LLjv1Q0x4xEY35ncMIXCRfcVReepoMtz1GqklDo1FrL/CUUoeR1Cvlmshf2mpStgerY09+pRADhq6hvenLEdKGCrNXiELgOZVdNJVf/ZSJjMgeweSLu98lVxCbh2RKeEIsso2Mh2BVlOqYIyAq1ioW23GwUa1ICbjdjDjzatD2LAaSE0PSOY8GPD8+YRsoqL7iyFwK8ykG8zyBZUqqSn9oGWottkr+F3cM548IjWcPUQcuD1KiC22vcQb9j+UKKoWQF9EWpVw8RUAIVHqBWg+CBgOAdbAaD+n9h7BUFQOj4IaLHEAVLAzYBZ3Ep6IHt8xHzGNQQTr+Gq4enyUptWLRhgI5Nr5lI5Az5l9NDPwIbQt4jpgpy+wLl013AQFdGv1Fi9lFzeBnIH5FGaXIz8gCyG2Nx2WCRArY653Axez8wn6RfOrP4cRJV5AmjTEzYZcsEKFdx7zVyn3FQBE+TwQiQqdgjObggtHtmJDj18UUSiy35LYuQTVD+R7Y4Tue2Q10QA/kGdewEngUpkv+DiHF97EKJLNrIbVXs6DiLOczCDJQhe31LkullxHgPJZNO/T+RXiOBCHz7CSgr4rgLFs4cyhTiRb1bwgqioWyxVKicwo2QXhuwT7cJ3WeYQvov4iF2LDlCrgOooqLRl+BqryYm5sobuIV6XEYEf0lGlJf5FPW1jO42TtQ+/YGqfEsYa1dDggtjKdMqQH6iYKC1Ei3Q1Cy3V2fMrTNyU/2lkTpY2hJZb1OuIrFTqERdF/E5SwLDn2YfDQLwy0w+hu5QTWsNlBQGhTLT4SE4hn5EIg9eRixOlxL1l54tyX8ex2cMo9idsPrFMCmnkegNGByXkdwg0fCoCBo0xEelr5g4dgiUyUIxmKp9YKCmnL1L0LZvwkVWVc7grKR2/YXoJXTDg9KHgxVSbjH8LzMXt/K8QRVD59lHVX1NYt13LNF/kSc1T3CiX3y4HAH2D7gK4kkJDS6Jn5pYpBsPlDqLSWSyiDF/Yoh83qOg+BSARdUucOYQxHQO74nxeEx+zALoCumWjeLwRtgg3ScHiOgsH+R3fwgp93AHHZYqsriBS+eSMSKunjBfLpLaZwEVsWyRXA8sRcZhlw+JwpD5ttH2F0hrgB7OAI7cm1ZzmG7VCFtoCkCuY1UNa4QbUdAg3PxFX2g3ALD9y1yK2uuSF/Q7Ct0vsXe6i7QPYyKxP1KcOSzUW18xOgHNvH1LebbeX2UqXcWCXRKP3EqK8DWVa5JatseOIHBssJc5jFa+p2Jr+ZSqnrqLAlk5YNQ7XsKnyQj5hJY34HsS1brl7HP+Q4lmw2K2YcE10EJpr1LVtlNxcnJ3LuM5+oIbAi0FwnCNQsZW09MYv9QZoyPg6iZp1BRX8Sy4OVExs2y6ZrhEQxnBfLOqh/Co3HnfZpRbZ1FWVMNRXuVtVnTEsxVY8Rpsv7vYbV88RK2DDWNppC/tgxyn+HY4zli3OC/Ev3qNGeziL5Lz+K8qfCW/DYlC2EaMhdTkhk5SjHUEXZTGXktuXrNxxsuDkeZcuX/Hmd7sQmciorFiQ2Y7jBL2LBBjb4i5zLuMuWOIjBjzkQuAvuCjCNIxvKG4u1LatJcuDbDXQnq6KnMsdxKUnMNux+RYbzOZx/Lgw0YJ7UuBqdAhXujEqBySsNALy+4vPBz+LL9lHCFQCdAilOS1tty6zIdSl8yo5D/IssmOs+0wR4jTb5RGFAMqKFSskpD3A7PYoGo4xSF3xBAkqsyjuRtRuCIRxUOINiEVTLb/jX8z+ABOLRj3IKhcdB4uM5q8UydhBGoRnc4mk//9k=" alt="Артём Сальников">
       <div class="idmain">
         <h1>Артём Сальников</h1>
-        <p class="role">AI Art Director / Prompt Engineer</p>
-        <p class="pitch">Создаю коммерческие визуалы для брендов: от товарной фотографии до AI-видео. Полный цикл — от промпта до финального креатива. <b>Без фотостудии, за часы.</b></p>
+        <p class="role">AI-дизайнер · карточки товаров для маркетплейсов</p>
+        <p class="pitch">Продающий визуал для Wildberries и Ozon: главные изображения, инфографика, слайды воронки, rich-контент и баннеры. Продуктовые сцены собираю на нейросетях, финал дорабатываю руками. <b>Без фотостудии, за часы.</b></p>
         <a class="tg" href="https://t.me/august_moonbeam" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24"><path d="M21.9 4.3 18.7 19c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-4.9L18 6.3c.4-.3-.1-.5-.6-.2L6.5 13 1.8 11.5c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg>
           Telegram
@@ -760,7 +764,7 @@ footer{
         <div class="stack">
           <span class="lbl">Стек и инструменты</span>
           <div class="chips">
-          <span class="chip">Midjourney</span><span class="chip">ComfyUI</span><span class="chip">Stable Diffusion / Flux</span><span class="chip">Kling</span><span class="chip">MiniMax H3</span><span class="chip">Runway</span><span class="chip">Higgsfield AI</span><span class="chip">Seedance 2.0–2.5</span><span class="chip">Cinema 2.0–4.0</span><span class="chip">Full Stack</span><span class="chip">Photoshop</span><span class="chip">CapCut</span>
+          <span class="chip">Adobe Photoshop</span><span class="chip">Midjourney</span><span class="chip">Nano Banana</span><span class="chip">Stable Diffusion / Flux</span><span class="chip">ComfyUI</span><span class="chip">Инфографика</span><span class="chip">Rich-контент</span><span class="chip">A/B-тесты обложек</span><span class="chip">Wildberries</span><span class="chip">Ozon</span>
           </div>
         </div>
       </div>
@@ -768,87 +772,10 @@ footer{
   </div>
 </header>
 
-<section class="reel">
-  <div class="glowwrap" aria-hidden="true"><div class="glow" id="glow"></div></div>
-  <div class="wrap">
-    <div class="sechead">
-      <span class="eyebrow">AI-видео <b>/</b> шоурил</span>
-      <span class="counter"><em id="cnum">01</em> / <span id="ctot">09</span></span>
-    </div>
-  </div>
-
-  <div class="stage" id="stage" aria-roledescription="карусель" aria-label="Видеоработы">
-    <div class="track" id="track"></div>
-    <button class="nav prev" id="prev" aria-label="Предыдущая работа"><svg viewBox="0 0 24 24"><path d="M15.4 3.6 7 12l8.4 8.4 1.6-1.7-6.7-6.7 6.7-6.7z"/></svg></button>
-    <button class="nav next" id="next" aria-label="Следующая работа"><svg viewBox="0 0 24 24"><path d="M8.6 3.6 7 5.3l6.7 6.7L7 18.7l1.6 1.7L17 12z"/></svg></button>
-    <div class="hint" id="hint" aria-hidden="true">
-      <span class="hand">
-        <svg viewBox="0 0 32 32"><path d="M12 19V8.5a2 2 0 0 1 4 0V16m0-1.5a2 2 0 0 1 4 0V17m0-1a2 2 0 0 1 4 0v1m0 0a2 2 0 0 1 3.4 0v4.2c0 3.8-2.6 6.8-6.6 6.8h-2.2c-2.4 0-4-1-5.3-2.8l-4-5.6a2 2 0 0 1 3-2.6L12 19"/></svg>
-      </span>
-      <span class="txt">Свайп</span>
-      <span class="arrows"><i></i><i></i><i></i></span>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <div class="readout" id="readout" aria-live="polite"></div>
-
-    <div class="timeline">
-      <div class="tl-meta"><span>Таймлайн работ</span><span id="tlname">—</span></div>
-      <div class="strip" id="strip"></div>
-    </div>
-  </div>
-</section>
-
-<section class="deck">
-  <div class="wrap">
-    <div class="sechead">
-      <span class="eyebrow">Карточки товаров <b>/</b> Wildberries · Ozon</span>
-      <span class="counter"><em id="dknum">01</em> / <span id="dktot">13</span></span>
-    </div>
-
-    <div class="decklead">
-      <h2>Карточки товаров для Wildberries и Ozon</h2>
-      <p>Второе направление помимо AI-видео: инфографика, продающие слайды и фотоворонка карточки - от анализа товара и УТП до гипотез по CTR и конверсии. Ниже презентация с кейсами.</p>
-      <div class="decktags">
-        <span class="decktag">Инфографика</span>
-        <span class="decktag">Фотоворонка</span>
-        <span class="decktag">Редизайн карточек</span>
-        <span class="decktag">AI-визуал</span>
-      </div>
-    </div>
-
-    <div class="deckbox" id="deckbox" tabindex="0" aria-roledescription="презентация" aria-label="Портфолио карточек товаров для маркетплейсов">
-      <div class="deckview" id="deckview">
-        <img id="dkA" alt="Слайд презентации: карточки товаров" draggable="false">
-        <img id="dkB" alt="" aria-hidden="true" draggable="false">
-      </div>
-      <button class="dnav dprev" id="dkprev" type="button" aria-label="Предыдущий слайд">
-        <svg viewBox="0 0 24 24"><path d="M15.4 3.6 7 12l8.4 8.4 1.6-1.7-6.7-6.7 6.7-6.7z"/></svg>
-      </button>
-      <button class="dnav dnext" id="dknext" type="button" aria-label="Следующий слайд">
-        <svg viewBox="0 0 24 24"><path d="M8.6 3.6 7 5.3l6.7 6.7L7 18.7l1.6 1.7L17 12z"/></svg>
-      </button>
-      <div class="deckmsg" id="dkmsg" role="status">
-        <span><b>Слайды не загрузились</b>Проверьте, что папка <code>slides</code> лежит рядом с <code>index.html</code>.</span>
-      </div>
-      <div class="dprog" id="dkprog" aria-hidden="true"><i></i></div>
-      <button class="dfull" id="dkfull" type="button" aria-label="Открыть во весь экран">
-        <svg viewBox="0 0 24 24"><path d="M4 9V4h5v2H6v3zm11-5h5v5h-2V6h-3zM4 15h2v3h3v2H4zm14 0h2v5h-5v-2h3z"/></svg>
-      </button>
-    </div>
-
-    <div class="deckfoot">
-      <div class="ddots" id="dkdots"></div>
-      <span class="dhint">Листается само · наведите, чтобы остановить</span>
-    </div>
-  </div>
-</section>
-
 <section class="cases">
   <div class="wrap">
     <div class="sechead">
-      <span class="eyebrow">Кейсы <b>/</b> собранные воронки</span>
+      <span class="eyebrow">Карточки товаров <b>/</b> Wildberries · Ozon</span>
       <span class="counter">10 слайдов</span>
     </div>
 
@@ -941,6 +868,51 @@ footer{
   </div>
 </section>
 
+<section class="deck">
+  <div class="wrap">
+    <div class="sechead">
+      <span class="eyebrow">Подход <b>/</b> как я собираю карточку</span>
+      <span class="counter"><em id="dknum">01</em> / <span id="dktot">13</span></span>
+    </div>
+
+    <div class="decklead">
+      <h2>Карточки товаров для Wildberries и Ozon</h2>
+      <p>Второе направление помимо AI-видео: инфографика, продающие слайды и фотоворонка карточки - от анализа товара и УТП до гипотез по CTR и конверсии. Ниже презентация с кейсами.</p>
+      <div class="decktags">
+        <span class="decktag">Инфографика</span>
+        <span class="decktag">Фотоворонка</span>
+        <span class="decktag">Редизайн карточек</span>
+        <span class="decktag">AI-визуал</span>
+      </div>
+    </div>
+
+    <div class="deckbox" id="deckbox" tabindex="0" aria-roledescription="презентация" aria-label="Портфолио карточек товаров для маркетплейсов">
+      <div class="deckview" id="deckview">
+        <img id="dkA" alt="Слайд презентации: карточки товаров" draggable="false">
+        <img id="dkB" alt="" aria-hidden="true" draggable="false">
+      </div>
+      <button class="dnav dprev" id="dkprev" type="button" aria-label="Предыдущий слайд">
+        <svg viewBox="0 0 24 24"><path d="M15.4 3.6 7 12l8.4 8.4 1.6-1.7-6.7-6.7 6.7-6.7z"/></svg>
+      </button>
+      <button class="dnav dnext" id="dknext" type="button" aria-label="Следующий слайд">
+        <svg viewBox="0 0 24 24"><path d="M8.6 3.6 7 5.3l6.7 6.7L7 18.7l1.6 1.7L17 12z"/></svg>
+      </button>
+      <div class="deckmsg" id="dkmsg" role="status">
+        <span><b>Слайды не загрузились</b>Проверьте, что папка <code>slides</code> лежит рядом с <code>index.html</code>.</span>
+      </div>
+      <div class="dprog" id="dkprog" aria-hidden="true"><i></i></div>
+      <button class="dfull" id="dkfull" type="button" aria-label="Открыть во весь экран">
+        <svg viewBox="0 0 24 24"><path d="M4 9V4h5v2H6v3zm11-5h5v5h-2V6h-3zM4 15h2v3h3v2H4zm14 0h2v5h-5v-2h3z"/></svg>
+      </button>
+    </div>
+
+    <div class="deckfoot">
+      <div class="ddots" id="dkdots"></div>
+      <span class="dhint">Листается само · наведите, чтобы остановить</span>
+    </div>
+  </div>
+</section>
+
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр слайда">
   <img class="lbimg" id="lbimg" alt="">
   <button class="lbnav lbprev" id="lbprev" type="button" aria-label="Предыдущий">
@@ -954,6 +926,41 @@ footer{
   </button>
   <div class="lbbar"><em id="lbnum">1</em> / <span id="lbtot">1</span><span id="lbcap"></span></div>
 </div>
+
+<section class="reel">
+  <div class="glowwrap" aria-hidden="true"><div class="glow" id="glow"></div></div>
+  <div class="wrap">
+    <div class="sechead">
+      <span class="eyebrow">Дополнительно <b>/</b> AI-видео</span>
+      <span class="counter"><em id="cnum">01</em> / <span id="ctot">09</span></span>
+    </div>
+<div class="reellead">
+      <p>Помимо статики делаю рекламные ролики и динамические превью на нейросетях. Отдельное направление, не основное - но пригождается, когда карточке нужно видео.</p>
+    </div>
+  </div>
+
+  <div class="stage" id="stage" aria-roledescription="карусель" aria-label="Видеоработы">
+    <div class="track" id="track"></div>
+    <button class="nav prev" id="prev" aria-label="Предыдущая работа"><svg viewBox="0 0 24 24"><path d="M15.4 3.6 7 12l8.4 8.4 1.6-1.7-6.7-6.7 6.7-6.7z"/></svg></button>
+    <button class="nav next" id="next" aria-label="Следующая работа"><svg viewBox="0 0 24 24"><path d="M8.6 3.6 7 5.3l6.7 6.7L7 18.7l1.6 1.7L17 12z"/></svg></button>
+    <div class="hint" id="hint" aria-hidden="true">
+      <span class="hand">
+        <svg viewBox="0 0 32 32"><path d="M12 19V8.5a2 2 0 0 1 4 0V16m0-1.5a2 2 0 0 1 4 0V17m0-1a2 2 0 0 1 4 0v1m0 0a2 2 0 0 1 3.4 0v4.2c0 3.8-2.6 6.8-6.6 6.8h-2.2c-2.4 0-4-1-5.3-2.8l-4-5.6a2 2 0 0 1 3-2.6L12 19"/></svg>
+      </span>
+      <span class="txt">Свайп</span>
+      <span class="arrows"><i></i><i></i><i></i></span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="readout" id="readout" aria-live="polite"></div>
+
+    <div class="timeline">
+      <div class="tl-meta"><span>Таймлайн работ</span><span id="tlname">—</span></div>
+      <div class="strip" id="strip"></div>
+    </div>
+  </div>
+</section>
 
 <section class="channels">
   <div class="wrap">
@@ -1381,9 +1388,14 @@ function openModal(i){
   /* на телефоне и планшете сразу разворачиваем во весь экран */
   if(window.matchMedia('(pointer: coarse)').matches||window.innerWidth<900) goFullscreen();
   if(w.u){
-    const id=w.u.split('/').pop();
+    /* разбираем ссылку: vimeo.com/ID, vimeo.com/ID/HASH, vimeo.com/ID?h=HASH */
+    const u=w.u.split('?')[0].replace(/\/+$/,'').split('/');
+    const id=u[u.length-1].match(/^\d+$/)?u[u.length-1]:u[u.length-2];
+    let hash=u[u.length-1].match(/^\d+$/)?'':u[u.length-1];
+    const qm=w.u.match(/[?&]h=([a-z0-9]+)/i); if(qm) hash=qm[1];
     const f=document.createElement('iframe');
-    f.src='https://player.vimeo.com/video/'+id+'?autoplay=1&title=0&byline=0&portrait=0&dnt=1';
+    f.src='https://player.vimeo.com/video/'+id+(hash?'?h='+hash+'&':'?')+
+          'autoplay=1&title=0&byline=0&portrait=0';
     f.allow='autoplay; fullscreen; picture-in-picture';
     f.setAttribute('allowfullscreen','');
     mplayer.appendChild(f);
@@ -1394,7 +1406,19 @@ function openModal(i){
       if(d&&d.event){ ok=true; clearTimeout(mTimer); const s=mplayer.querySelector('.mspin'); if(s) s.remove(); }
     };
     window.addEventListener('message',mMsg);
-    mTimer=setTimeout(()=>{ if(!ok) fallback(w); }, 3200);
+    /* плеер загрузился — снимаем спиннер и оставляем его в покое.
+       Vimeo не всегда шлёт служебные события, поэтому по их молчанию
+       мы больше ничего не сносим: рабочий плеер важнее индикатора. */
+    f.addEventListener('load',()=>{
+      ok=true; clearTimeout(mTimer);
+      const s=mplayer.querySelector('.mspin'); if(s) s.remove();
+    });
+    /* запасной вариант только если iframe вообще не поднялся */
+    f.addEventListener('error',()=>{ clearTimeout(mTimer); fallback(w); });
+    mTimer=setTimeout(()=>{
+      const s=mplayer.querySelector('.mspin'); if(s) s.remove();
+      if(!mplayer.querySelector('iframe')) fallback(w);
+    }, 9000);
   } else { fallback(w); }
 }
 /* открываем плеер сразу во весь экран (жест пользователя уже есть — это клик) */
@@ -1432,8 +1456,8 @@ function fallback(w){
     box.appendChild(v); const pr=v.play(); if(pr&&pr.catch) pr.catch(()=>{});
   }
   box.insertAdjacentHTML('beforeend',
-    '<div class="inner"><p>Встроенный плеер Vimeo не открывается в этом окне — так работает защита площадки. '
-    +'Полная версия доступна по ссылке.</p>'
+    '<div class="inner"><p>Плеер не поднялся. Чаще всего это значит, что страница открыта с диска, а не с сайта - '
+    +'в таком окружении Vimeo встраивание не отдаёт. Видео доступно по ссылке.</p>'
     +(w.u?'<a class="btn-play" href="'+w.u+'" target="_blank" rel="noopener">'
       +'<svg viewBox="0 0 24 24"><path d="M6 3.5 20 12 6 20.5z"/></svg>Смотреть на Vimeo</a>':'')
     +'</div>');
