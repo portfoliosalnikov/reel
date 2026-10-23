@@ -1512,6 +1512,7 @@ window.addEventListener('pointerup',mEnd);
 
 layout(); render(); preview(); ready=true;
 
+const START = 6;
 const DECK = ["slides/01.png", "slides/02.png", "slides/03.png", "slides/04.png", "slides/05.png", "slides/06.png", "slides/07.png", "slides/08.png", "slides/09.png", "slides/10.png", "slides/11.png", "slides/12.png", "slides/13.png"];
 
 (function(){
@@ -1694,7 +1695,8 @@ const DECK = ["slides/01.png", "slides/02.png", "slides/03.png", "slides/04.png"
       im.onload = ()=>{
         for(let i=0;i<DECK.length;i++) DECK[i] = swapExt(DECK[i], ext);
         ready = true;
-        show(0, true);
+        /* стартуем со слайда с одеждой, дальше листается по кругу */
+        show(START, true);
         start();
       };
       im.onerror = ()=>{ k++; probe(); };
